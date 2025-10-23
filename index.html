@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ウェブカメラシューティング</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ウェブカメラシューティング</h1>
+    <p>手の動きで自機を操作して、敵を避けてください。</p>
+    <div class="container">
+        <canvas id="gameCanvas" width="1280" height="720"></canvas>
+        <!-- ウェブカメラ映像（デバッグ用に表示） -->
+        <video id="webcam" autoplay playsinline muted></video>
+    </div>
+
+    <!-- MediaPipeライブラリ -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0/wasm/vision_bundle.js" crossorigin="anonymous"></script>
+    <!-- ゲームのロジック -->
+    <script src="game.js" type="module"></script>
+</body>
+</html>
